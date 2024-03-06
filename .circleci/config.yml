@@ -22,10 +22,10 @@ jobs:
             sudo mv /tmp/docker/* /usr/bin
       - run:
           name: Build Docker image
-          command: docker build -t stephengrider/docker-react -f Dockerfile.dev .
+          command: docker build -t anaks/docker-react -f Dockerfile.dev .
       - run:
           name: Run tests
-          command: docker run -e CI=true stephengrider/docker-react npm run test
+          command: docker run -e CI=true anaks/docker-react npm run test
 
 workflows:
   version: 2
