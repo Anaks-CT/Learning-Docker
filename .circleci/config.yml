@@ -39,15 +39,9 @@ jobs:
       - run: # Install the AWS CLI if it is not already included in the docker image
           name: Install awscli
           command: sudo apt-get update && sudo apt-get install -y awscli
-      - run:
-          name: List directories
-          command: |
-            ls
-            cd /home/circleci/project  # Navigate to your project directory
-            ls -d */
       - run: # Deploy to S3 using the sync command
           name: Deploy to S3
-          command: aws s3 sync /home/circleci/project s3://elasticbeanstalk-ap-southeast-1-363493089880/docker
+          command: aws s3 sync /home/circleci/project s3://elasticbeanstalk-ap-southeast-1-363493089880/frontend
 
 workflows:
   version: 2
