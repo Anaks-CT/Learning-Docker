@@ -2,7 +2,7 @@ version: 2.1
 executors:
   docker-executor:
     docker:
-      - image: node:16-alpine
+      - image: cimg/base:2022.09
 
 jobs:
   test:
