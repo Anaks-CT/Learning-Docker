@@ -41,7 +41,7 @@ jobs:
           command: sudo apt-get update && sudo apt-get install -y awscli
       - run: # Deploy to S3 using the sync command
           name: Deploy to S3
-          command: aws s3 sync /app/build s3://elasticbeanstalk-ap-southeast-1-363493089880
+          command: aws s3 sync ~/app/build s3://elasticbeanstalk-ap-southeast-1-363493089880
 
 workflows:
   version: 2
