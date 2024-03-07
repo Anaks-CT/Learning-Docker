@@ -47,7 +47,7 @@ jobs:
             ls -d */
       - run: # Deploy to S3 using the sync command
           name: Deploy to S3
-          command: aws s3 sync /home/circleci/project s3://elasticbeanstalk-ap-southeast-1-363493089880
+          command: aws s3 sync /home/circleci/project s3://elasticbeanstalk-ap-southeast-1-363493089880/docker
 
 workflows:
   version: 2
