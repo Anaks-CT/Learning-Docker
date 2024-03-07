@@ -38,7 +38,7 @@ jobs:
           command: docker build .
       - run: # Install the AWS CLI if it is not already included in the docker image
           name: Install awscli
-          command: apt-get update && apt-get install -y awscli
+          command: sudo apt-get update && apt-get install -y awscli
       - run: # Deploy to S3 using the sync command
           name: Deploy to S3
           command: aws s3 sync /app/build s3://elasticbeanstalk-ap-southeast-1-363493089880
