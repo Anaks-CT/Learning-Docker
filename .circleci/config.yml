@@ -2,10 +2,10 @@ version: 2.1
 executors:
   docker-executor:
     docker:
-      - image: circleci/node:latest
+      - image: node:16-alpine
 
 jobs:
-  build:
+  test:
     executor: docker-executor
     steps:
       - checkout
@@ -31,4 +31,4 @@ workflows:
   version: 2
   build:
     jobs:
-      - build
+      - test
